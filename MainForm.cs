@@ -97,12 +97,11 @@ namespace Info
 
                         if (key?.GetValue("ID") is null)
                         {
+                            // Генерация 7ми символьного хэша
                             key?.SetValue("ID", Convert.ToBase64String(Encoding.UTF8.GetBytes(Guid.NewGuid().ToString())).Remove(7));
                             await client.SetAsync($"Computer Components/{Environment.UserName}{key.GetValue("ID")}", info);
-                            //if (!Application.OpenForms.OfType<NotificationForm>().Any()) new NotificationForm(1).Show();
                         }
                         else await client.UpdateAsync($"Computer Components/{Environment.UserName}{key.GetValue("ID")}", info);
-                        //if (!Application.OpenForms.OfType<NotificationForm>().Any()) new NotificationForm(1).Show();
                     }
                     catch (Exception) {
                         // ignored
