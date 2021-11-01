@@ -101,8 +101,7 @@ namespace Info
                             await client.SetAsync($"Computer Components/{Environment.UserName}{key.GetValue("ID")}", info);
                             //if (!Application.OpenForms.OfType<NotificationForm>().Any()) new NotificationForm(1).Show();
                         }
-
-                        await client.UpdateAsync($"Computer Components/{Environment.UserName}{key.GetValue("ID")}", info);
+                        else await client.UpdateAsync($"Computer Components/{Environment.UserName}{key.GetValue("ID")}", info);
                         //if (!Application.OpenForms.OfType<NotificationForm>().Any()) new NotificationForm(1).Show();
                     }
                     catch (Exception) {
@@ -135,13 +134,13 @@ namespace Info
                     // Переключение флага для раскрытия/скрытия панели с данными
                     _checkedFirebase = !_checkedFirebase;
 
-                    // Остановка таймер
+                    // Остановка таймера
                     TimerUpdateInfo.Enabled = !TimerUpdateInfo.Enabled; 
 
-                    // Скачивание базы.
+                    // Чтение json базы.
                     try
                     {
-                        Dictionary<string, Information> dictionary;
+                       Dictionary<string, Information> dictionary;
                        var list = new List<string>() { };
 
                        var webRequest = WebRequest.Create(new Uri($"{fireCon.BasePath}Computer%20Components.json"));
@@ -164,6 +163,7 @@ namespace Info
                                    var selectedItem = ListOfKeys.SelectedItems[0].Text;
                                    LabelOS.Text = $"Операционная система: {dictionary?[selectedItem]?.OperationSystem}";
                                    LabelCPU.Text = $"Процессор: {dictionary?[selectedItem]?.CPU}";
+                                   LabelGPU.Text = $"Видеокарта: {dictionary?[selectedItem].GPU}";
                                    LabelMotherboard.Text = $"Материнская плата: {dictionary?[selectedItem]?.Motherboard}";
                                    LabelMonitor.Text = $"Монитор: {dictionary?[selectedItem]?.Monitor}";
                                    LabelRAM.Text = $"Оперативная память: {dictionary?[selectedItem]?.RAM}";

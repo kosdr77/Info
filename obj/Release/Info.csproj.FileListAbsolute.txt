@@ -97,3 +97,17 @@ D:\Inf. system\Info\obj\Release\Info.csproj.CopyComplete
 D:\Inf. system\Info\obj\Release\Info.exe
 D:\Inf. system\Info\obj\Release\Info.pdb
 C:\Users\Admin\Desktop\third\Inf. system\Info\obj\Release\Info.csproj.CopyComplete
+C:\Users\Admin\Desktop\Info\bin\Release\FireSharp.dll
+C:\Users\Admin\Desktop\Info\bin\Release\Microsoft.Threading.Tasks.dll
+C:\Users\Admin\Desktop\Info\bin\Release\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\Admin\Desktop\Info\bin\Release\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\Admin\Desktop\Info\bin\Release\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\Info\bin\Release\System.Net.Http.Extensions.dll
+C:\Users\Admin\Desktop\Info\bin\Release\System.Net.Http.Primitives.dll
+C:\Users\Admin\Desktop\Info\bin\Release\Microsoft.Threading.Tasks.xml
+C:\Users\Admin\Desktop\Info\bin\Release\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\Admin\Desktop\Info\bin\Release\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\Admin\Desktop\Info\bin\Release\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\Info\bin\Release\System.Net.Http.Extensions.xml
+C:\Users\Admin\Desktop\Info\bin\Release\System.Net.Http.Primitives.xml
+C:\Users\Admin\Desktop\Info\obj\Release\Info.NotificationForm.resources
