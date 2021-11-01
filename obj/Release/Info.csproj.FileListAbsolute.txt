@@ -1,0 +1,99 @@
+C:\Users\Admin\Desktop\Info\obj\Release\Info.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Info\obj\Release\Info.FormShadow.resources
+C:\Users\Admin\Desktop\Info\obj\Release\Info.Properties.Resources.resources
+C:\Users\Admin\Desktop\Info\obj\Release\Info.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Info\obj\Release\Info.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Info\obj\Release\Info.MainForm.resources
+C:\Users\Admin\Desktop\Info\bin\Release\Info.exe.config
+C:\Users\Admin\Desktop\Info\bin\Release\Info.exe
+C:\Users\Admin\Desktop\Info\bin\Release\Info.pdb
+C:\Users\Admin\Desktop\Info\obj\Release\Info.exe
+C:\Users\Admin\Desktop\Info\obj\Release\Info.pdb
+C:\Users\Admin\Desktop\3 курс\Информационные системы\Info\bin\Release\Info.exe.config
+C:\Users\Admin\Desktop\3 курс\Информационные системы\Info\bin\Release\Info.exe
+C:\Users\Admin\Desktop\3 курс\Информационные системы\Info\bin\Release\Info.pdb
+C:\Users\Admin\Desktop\3 курс\Информационные системы\Info\obj\Release\Info.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\3 курс\Информационные системы\Info\obj\Release\Info.FormShadow.resources
+C:\Users\Admin\Desktop\3 курс\Информационные системы\Info\obj\Release\Info.SmartForm.resources
+C:\Users\Admin\Desktop\3 курс\Информационные системы\Info\obj\Release\Info.MainForm.resources
+C:\Users\Admin\Desktop\3 курс\Информационные системы\Info\obj\Release\Info.Properties.Resources.resources
+C:\Users\Admin\Desktop\3 курс\Информационные системы\Info\obj\Release\Info.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\3 курс\Информационные системы\Info\obj\Release\Info.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\3 курс\Информационные системы\Info\obj\Release\Info.exe
+C:\Users\Admin\Desktop\3 курс\Информационные системы\Info\obj\Release\Info.pdb
+C:\Users\Admin\Desktop\third\Информационные системы\Info\bin\Release\Info.exe.config
+C:\Users\Admin\Desktop\third\Информационные системы\Info\bin\Release\Info.exe
+C:\Users\Admin\Desktop\third\Информационные системы\Info\bin\Release\Info.pdb
+C:\Users\Admin\Desktop\third\Информационные системы\Info\obj\Release\Info.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\third\Информационные системы\Info\obj\Release\Info.FormShadow.resources
+C:\Users\Admin\Desktop\third\Информационные системы\Info\obj\Release\Info.MainForm.resources
+C:\Users\Admin\Desktop\third\Информационные системы\Info\obj\Release\Info.Properties.Resources.resources
+C:\Users\Admin\Desktop\third\Информационные системы\Info\obj\Release\Info.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\third\Информационные системы\Info\obj\Release\Info.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\third\Информационные системы\Info\obj\Release\Info.exe
+C:\Users\Admin\Desktop\third\Информационные системы\Info\obj\Release\Info.pdb
+C:\Users\marsyanya\Desktop\Info\bin\Release\Info.exe.config
+C:\Users\marsyanya\Desktop\Info\bin\Release\Info.exe
+C:\Users\marsyanya\Desktop\Info\bin\Release\Info.pdb
+C:\Users\marsyanya\Desktop\Info\obj\Release\Info.csproj.AssemblyReference.cache
+C:\Users\marsyanya\Desktop\Info\obj\Release\Info.FormShadow.resources
+C:\Users\marsyanya\Desktop\Info\obj\Release\Info.TaskForm.resources
+C:\Users\marsyanya\Desktop\Info\obj\Release\Info.SmartForm.resources
+C:\Users\marsyanya\Desktop\Info\obj\Release\Info.MainForm.resources
+C:\Users\marsyanya\Desktop\Info\obj\Release\Info.Properties.Resources.resources
+C:\Users\marsyanya\Desktop\Info\obj\Release\Info.csproj.GenerateResource.cache
+C:\Users\marsyanya\Desktop\Info\obj\Release\Info.csproj.CoreCompileInputs.cache
+C:\Users\marsyanya\Desktop\Info\obj\Release\Info.exe
+C:\Users\marsyanya\Desktop\Info\obj\Release\Info.pdb
+C:\Users\Admin\Desktop\third\Inf. system\Info\bin\Release\Info.exe.config
+C:\Users\Admin\Desktop\third\Inf. system\Info\bin\Release\Info.exe
+C:\Users\Admin\Desktop\third\Inf. system\Info\bin\Release\Info.pdb
+C:\Users\Admin\Desktop\third\Inf. system\Info\obj\Release\Info.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\third\Inf. system\Info\obj\Release\Info.FormShadow.resources
+C:\Users\Admin\Desktop\third\Inf. system\Info\obj\Release\Info.MainForm.resources
+C:\Users\Admin\Desktop\third\Inf. system\Info\obj\Release\Info.Properties.Resources.resources
+C:\Users\Admin\Desktop\third\Inf. system\Info\obj\Release\Info.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\third\Inf. system\Info\obj\Release\Info.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\third\Inf. system\Info\obj\Release\Info.exe
+C:\Users\Admin\Desktop\third\Inf. system\Info\obj\Release\Info.pdb
+C:\Users\Admin\Desktop\third\Inf. system\Info\bin\Release\FireSharp.dll
+C:\Users\Admin\Desktop\third\Inf. system\Info\bin\Release\Microsoft.Threading.Tasks.dll
+C:\Users\Admin\Desktop\third\Inf. system\Info\bin\Release\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\Admin\Desktop\third\Inf. system\Info\bin\Release\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\Admin\Desktop\third\Inf. system\Info\bin\Release\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\third\Inf. system\Info\bin\Release\System.Net.Http.Extensions.dll
+C:\Users\Admin\Desktop\third\Inf. system\Info\bin\Release\System.Net.Http.Primitives.dll
+C:\Users\Admin\Desktop\third\Inf. system\Info\bin\Release\Microsoft.Threading.Tasks.xml
+C:\Users\Admin\Desktop\third\Inf. system\Info\bin\Release\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\Admin\Desktop\third\Inf. system\Info\bin\Release\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\Admin\Desktop\third\Inf. system\Info\bin\Release\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\third\Inf. system\Info\bin\Release\System.Net.Http.Extensions.xml
+C:\Users\Admin\Desktop\third\Inf. system\Info\bin\Release\System.Net.Http.Primitives.xml
+C:\Users\Admin\Desktop\third\Inf. system\Info\obj\Release\Info.NotificationForm.resources
+D:\Inf. system\Info\bin\Release\Info.exe.config
+D:\Inf. system\Info\bin\Release\Info.exe
+D:\Inf. system\Info\bin\Release\Info.pdb
+D:\Inf. system\Info\bin\Release\FireSharp.dll
+D:\Inf. system\Info\bin\Release\Microsoft.Threading.Tasks.dll
+D:\Inf. system\Info\bin\Release\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\Inf. system\Info\bin\Release\Microsoft.Threading.Tasks.Extensions.dll
+D:\Inf. system\Info\bin\Release\Newtonsoft.Json.dll
+D:\Inf. system\Info\bin\Release\System.Net.Http.Extensions.dll
+D:\Inf. system\Info\bin\Release\System.Net.Http.Primitives.dll
+D:\Inf. system\Info\bin\Release\Microsoft.Threading.Tasks.xml
+D:\Inf. system\Info\bin\Release\Microsoft.Threading.Tasks.Extensions.xml
+D:\Inf. system\Info\bin\Release\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\Inf. system\Info\bin\Release\Newtonsoft.Json.xml
+D:\Inf. system\Info\bin\Release\System.Net.Http.Extensions.xml
+D:\Inf. system\Info\bin\Release\System.Net.Http.Primitives.xml
+D:\Inf. system\Info\obj\Release\Info.csprojAssemblyReference.cache
+D:\Inf. system\Info\obj\Release\Info.FormShadow.resources
+D:\Inf. system\Info\obj\Release\Info.NotificationForm.resources
+D:\Inf. system\Info\obj\Release\Info.MainForm.resources
+D:\Inf. system\Info\obj\Release\Info.Properties.Resources.resources
+D:\Inf. system\Info\obj\Release\Info.csproj.GenerateResource.cache
+D:\Inf. system\Info\obj\Release\Info.csproj.CoreCompileInputs.cache
+D:\Inf. system\Info\obj\Release\Info.csproj.CopyComplete
+D:\Inf. system\Info\obj\Release\Info.exe
+D:\Inf. system\Info\obj\Release\Info.pdb
+C:\Users\Admin\Desktop\third\Inf. system\Info\obj\Release\Info.csproj.CopyComplete

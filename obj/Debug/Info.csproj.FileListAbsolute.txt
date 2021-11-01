@@ -1,0 +1,75 @@
+C:\Users\Admin\Desktop\Info\bin\Debug\Info.exe.config
+C:\Users\Admin\Desktop\Info\bin\Debug\Info.exe
+C:\Users\Admin\Desktop\Info\bin\Debug\Info.pdb
+C:\Users\Admin\Desktop\Info\obj\Debug\Info.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Info\obj\Debug\Info.FormShadow.resources
+C:\Users\Admin\Desktop\Info\obj\Debug\Info.MainForm.resources
+C:\Users\Admin\Desktop\Info\obj\Debug\Info.Properties.Resources.resources
+C:\Users\Admin\Desktop\Info\obj\Debug\Info.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Info\obj\Debug\Info.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Info\obj\Debug\Info.exe
+C:\Users\Admin\Desktop\Info\obj\Debug\Info.pdb
+C:\Users\Admin\Desktop\Info\obj\Debug\Info.SmartForm.resources
+C:\Users\Admin\Desktop\third\Информационные системы\Info\bin\Debug\Info.exe.config
+C:\Users\Admin\Desktop\third\Информационные системы\Info\bin\Debug\Info.exe
+C:\Users\Admin\Desktop\third\Информационные системы\Info\bin\Debug\Info.pdb
+C:\Users\Admin\Desktop\third\Информационные системы\Info\obj\Debug\Info.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\third\Информационные системы\Info\obj\Debug\Info.FormShadow.resources
+C:\Users\Admin\Desktop\third\Информационные системы\Info\obj\Debug\Info.TaskForm.resources
+C:\Users\Admin\Desktop\third\Информационные системы\Info\obj\Debug\Info.SmartForm.resources
+C:\Users\Admin\Desktop\third\Информационные системы\Info\obj\Debug\Info.MainForm.resources
+C:\Users\Admin\Desktop\third\Информационные системы\Info\obj\Debug\Info.Properties.Resources.resources
+C:\Users\Admin\Desktop\third\Информационные системы\Info\obj\Debug\Info.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\third\Информационные системы\Info\obj\Debug\Info.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\third\Информационные системы\Info\obj\Debug\Info.exe
+C:\Users\Admin\Desktop\third\Информационные системы\Info\obj\Debug\Info.pdb
+C:\Users\marsyanya\Desktop\Info\bin\Debug\Info.exe.config
+C:\Users\marsyanya\Desktop\Info\bin\Debug\Info.exe
+C:\Users\marsyanya\Desktop\Info\bin\Debug\Info.pdb
+C:\Users\marsyanya\Desktop\Info\obj\Debug\Info.csproj.AssemblyReference.cache
+C:\Users\marsyanya\Desktop\Info\obj\Debug\Info.FormShadow.resources
+C:\Users\marsyanya\Desktop\Info\obj\Debug\Info.TaskForm.resources
+C:\Users\marsyanya\Desktop\Info\obj\Debug\Info.SmartForm.resources
+C:\Users\marsyanya\Desktop\Info\obj\Debug\Info.MainForm.resources
+C:\Users\marsyanya\Desktop\Info\obj\Debug\Info.Properties.Resources.resources
+C:\Users\marsyanya\Desktop\Info\obj\Debug\Info.csproj.GenerateResource.cache
+C:\Users\marsyanya\Desktop\Info\obj\Debug\Info.csproj.CoreCompileInputs.cache
+C:\Users\marsyanya\Desktop\Info\obj\Debug\Info.exe
+C:\Users\marsyanya\Desktop\Info\obj\Debug\Info.pdb
+C:\Users\Admin\Desktop\third\Inf. system\Info\bin\Debug\Info.exe.config
+C:\Users\Admin\Desktop\third\Inf. system\Info\bin\Debug\Info.exe
+C:\Users\Admin\Desktop\third\Inf. system\Info\bin\Debug\Info.pdb
+C:\Users\Admin\Desktop\third\Inf. system\Info\obj\Debug\Info.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\third\Inf. system\Info\obj\Debug\Info.FormShadow.resources
+C:\Users\Admin\Desktop\third\Inf. system\Info\obj\Debug\Info.MainForm.resources
+C:\Users\Admin\Desktop\third\Inf. system\Info\obj\Debug\Info.Properties.Resources.resources
+C:\Users\Admin\Desktop\third\Inf. system\Info\obj\Debug\Info.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\third\Inf. system\Info\obj\Debug\Info.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\third\Inf. system\Info\obj\Debug\Info.exe
+C:\Users\Admin\Desktop\third\Inf. system\Info\obj\Debug\Info.pdb
+D:\Inf. system\Info\obj\Debug\Info.exe
+D:\Inf. system\Info\obj\Debug\Info.pdb
+D:\Inf. system\Info\bin\Debug\Info.exe.config
+D:\Inf. system\Info\bin\Debug\Info.exe
+D:\Inf. system\Info\bin\Debug\Info.pdb
+D:\Inf. system\Info\bin\Debug\FireSharp.dll
+D:\Inf. system\Info\bin\Debug\Microsoft.Threading.Tasks.dll
+D:\Inf. system\Info\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\Inf. system\Info\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+D:\Inf. system\Info\bin\Debug\Newtonsoft.Json.dll
+D:\Inf. system\Info\bin\Debug\System.Net.Http.Extensions.dll
+D:\Inf. system\Info\bin\Debug\System.Net.Http.Primitives.dll
+D:\Inf. system\Info\bin\Debug\Microsoft.Threading.Tasks.xml
+D:\Inf. system\Info\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+D:\Inf. system\Info\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\Inf. system\Info\bin\Debug\Newtonsoft.Json.xml
+D:\Inf. system\Info\bin\Debug\System.Net.Http.Extensions.xml
+D:\Inf. system\Info\bin\Debug\System.Net.Http.Primitives.xml
+D:\Inf. system\Info\obj\Debug\Info.csprojAssemblyReference.cache
+D:\Inf. system\Info\obj\Debug\Info.FormShadow.resources
+D:\Inf. system\Info\obj\Debug\Info.NotificationForm.resources
+D:\Inf. system\Info\obj\Debug\Info.MainForm.resources
+D:\Inf. system\Info\obj\Debug\Info.Properties.Resources.resources
+D:\Inf. system\Info\obj\Debug\Info.csproj.GenerateResource.cache
+D:\Inf. system\Info\obj\Debug\Info.csproj.CoreCompileInputs.cache
+D:\Inf. system\Info\obj\Debug\Info.csproj.CopyComplete

@@ -1,0 +1,64 @@
+C:\Users\marsyanya\Desktop\Loader 77\bin\Debug\Loader 77.exe.config
+C:\Users\marsyanya\Desktop\Loader 77\bin\Debug\Loader 77.exe
+C:\Users\marsyanya\Desktop\Loader 77\bin\Debug\Loader 77.pdb
+C:\Users\marsyanya\Desktop\Loader 77\obj\Debug\Loader 77.csproj.AssemblyReference.cache
+C:\Users\marsyanya\Desktop\Loader 77\obj\Debug\Loader_77.FormShadow.resources
+C:\Users\marsyanya\Desktop\Loader 77\obj\Debug\Loader_77.Properties.Resources.resources
+C:\Users\marsyanya\Desktop\Loader 77\obj\Debug\Loader 77.csproj.GenerateResource.cache
+C:\Users\marsyanya\Desktop\Loader 77\obj\Debug\Loader 77.csproj.CoreCompileInputs.cache
+C:\Users\marsyanya\Desktop\Loader 77\obj\Debug\Loader 77.exe
+C:\Users\marsyanya\Desktop\Loader 77\obj\Debug\Loader 77.pdb
+C:\Users\marsyanya\Desktop\Loader 77\obj\Debug\Loader_77.Loader_77.resources
+C:\Users\Admin\Desktop\Loader 77 orig\bin\Debug\Loader 77.exe.config
+C:\Users\Admin\Desktop\Loader 77 orig\bin\Debug\Loader 77.exe
+C:\Users\Admin\Desktop\Loader 77 orig\bin\Debug\Loader 77.pdb
+C:\Users\Admin\Desktop\Loader 77 orig\obj\Debug\Loader 77.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Loader 77 orig\obj\Debug\Loader_77.FormShadow.resources
+C:\Users\Admin\Desktop\Loader 77 orig\obj\Debug\Loader_77.Loader_77.resources
+C:\Users\Admin\Desktop\Loader 77 orig\obj\Debug\Loader_77.Properties.Resources.resources
+C:\Users\Admin\Desktop\Loader 77 orig\obj\Debug\Loader 77.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Loader 77 orig\obj\Debug\Loader 77.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Loader 77 orig\obj\Debug\Loader 77.exe
+C:\Users\Admin\Desktop\Loader 77 orig\obj\Debug\Loader 77.pdb
+C:\Users\Admin\Desktop\Loader 77\bin\Debug\Loader 77.exe.config
+C:\Users\Admin\Desktop\Loader 77\bin\Debug\Loader 77.exe
+C:\Users\Admin\Desktop\Loader 77\bin\Debug\Loader 77.pdb
+C:\Users\Admin\Desktop\Loader 77\obj\Debug\Loader 77.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Loader 77\obj\Debug\Loader_77.FormShadow.resources
+C:\Users\Admin\Desktop\Loader 77\obj\Debug\Loader_77.Loader_77.resources
+C:\Users\Admin\Desktop\Loader 77\obj\Debug\Loader_77.Properties.Resources.resources
+C:\Users\Admin\Desktop\Loader 77\obj\Debug\Loader 77.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Loader 77\obj\Debug\Loader 77.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Loader 77\obj\Debug\Loader 77.exe
+C:\Users\Admin\Desktop\Loader 77\obj\Debug\Loader 77.pdb
+C:\Users\Admin\Desktop\Loader 77\obj\Debug\Loader_77.Loader_77Info.resources
+C:\Users\Admin\Desktop\Simplex Calculator\bin\Debug\Loader 77.exe.config
+C:\Users\Admin\Desktop\Simplex Calculator\bin\Debug\Loader 77.exe
+C:\Users\Admin\Desktop\Simplex Calculator\bin\Debug\Loader 77.pdb
+C:\Users\Admin\Desktop\Simplex Calculator\obj\Debug\Loader 77.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Simplex Calculator\obj\Debug\Loader_77.FormShadow.resources
+C:\Users\Admin\Desktop\Simplex Calculator\obj\Debug\Loader_77.Loader_77.resources
+C:\Users\Admin\Desktop\Simplex Calculator\obj\Debug\Loader_77.Loader_77Info.resources
+C:\Users\Admin\Desktop\Simplex Calculator\obj\Debug\Loader_77.Properties.Resources.resources
+C:\Users\Admin\Desktop\Simplex Calculator\obj\Debug\Loader 77.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Simplex Calculator\obj\Debug\Loader 77.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Simplex Calculator\obj\Debug\Loader 77.exe
+C:\Users\Admin\Desktop\Simplex Calculator\obj\Debug\Loader 77.pdb
+C:\Users\Admin\Desktop\Simplex Calculator\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\Simplex Calculator\bin\Debug\Numpy.dll
+C:\Users\Admin\Desktop\Simplex Calculator\bin\Debug\NumSharp.dll
+C:\Users\Admin\Desktop\Simplex Calculator\bin\Debug\Python.Deployment.dll
+C:\Users\Admin\Desktop\Simplex Calculator\bin\Debug\Python.Included.dll
+C:\Users\Admin\Desktop\Simplex Calculator\bin\Debug\Python.Runtime.dll
+C:\Users\Admin\Desktop\Simplex Calculator\bin\Debug\System.Buffers.dll
+C:\Users\Admin\Desktop\Simplex Calculator\bin\Debug\System.Memory.dll
+C:\Users\Admin\Desktop\Simplex Calculator\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Admin\Desktop\Simplex Calculator\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Admin\Desktop\Simplex Calculator\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\Simplex Calculator\bin\Debug\NumSharp.pdb
+C:\Users\Admin\Desktop\Simplex Calculator\bin\Debug\Python.Runtime.xml
+C:\Users\Admin\Desktop\Simplex Calculator\bin\Debug\System.Buffers.xml
+C:\Users\Admin\Desktop\Simplex Calculator\bin\Debug\System.Memory.xml
+C:\Users\Admin\Desktop\Simplex Calculator\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Admin\Desktop\Simplex Calculator\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Admin\Desktop\Simplex Calculator\obj\Debug\Loader 77.csproj.CopyComplete

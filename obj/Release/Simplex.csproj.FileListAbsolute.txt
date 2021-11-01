@@ -1,0 +1,11 @@
+C:\Users\Admin\Desktop\Simplex Calculator\bin\Release\Simplex.exe.config
+C:\Users\Admin\Desktop\Simplex Calculator\bin\Release\Simplex.exe
+C:\Users\Admin\Desktop\Simplex Calculator\bin\Release\Simplex.pdb
+C:\Users\Admin\Desktop\Simplex Calculator\obj\Release\Simplex.Properties.Resources.resources
+C:\Users\Admin\Desktop\Simplex Calculator\obj\Release\Simplex.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Simplex Calculator\obj\Release\Simplex.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Simplex Calculator\obj\Release\Simplex.exe
+C:\Users\Admin\Desktop\Simplex Calculator\obj\Release\Simplex.pdb
+C:\Users\Admin\Desktop\Simplex Calculator\obj\Release\Simplex.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Simplex Calculator\obj\Release\Simplex.FormShadow.resources
+C:\Users\Admin\Desktop\Simplex Calculator\obj\Release\Simplex.Simplex_77.resources
