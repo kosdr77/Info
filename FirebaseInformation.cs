@@ -1,6 +1,6 @@
 ﻿namespace Info
 {
-    internal class Information
+    internal class FirebaseInformation
     {
         public string OperationSystem { get; set; }
         public string Motherboard { get; set; }
@@ -10,7 +10,7 @@
         public string Drives { get; set; }
         public string GPU { get; set; }
 
-        public Information()
+        public FirebaseInformation()
         {
             OperationSystem = Hardware.OperationSystem;
             Motherboard = Hardware.Motherboard;

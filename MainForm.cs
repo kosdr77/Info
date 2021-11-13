@@ -26,7 +26,7 @@ namespace Info
     {
         private readonly ListViewColumnSorter _lvwColumnSorter = new();
         private PerformanceCounter _performanceCounterCpu;
-        private readonly Information _systemInformation = new();
+        private readonly FirebaseInformation _systemFirebaseInformation = new();
         private bool _checkedFirebase;
 
         public MainForm()
@@ -83,7 +83,7 @@ namespace Info
                     BasePath = "https://info-d8750-default-rtdb.europe-west1.firebasedatabase.app/"
                 };
                 
-                var info = new Information();
+                var info = new FirebaseInformation();
 
                 // Занесение в базу
                 if (a.KeyValue == (char)Keys.D5)
@@ -139,7 +139,7 @@ namespace Info
                     // Чтение json базы.
                     try
                     {
-                       Dictionary<string, Information> dictionary;
+                       Dictionary<string, FirebaseInformation> dictionary;
                        var list = new List<string>() { };
 
                        var webRequest = WebRequest.Create(new Uri($"{fireCon.BasePath}Computer%20Components.json"));
@@ -148,7 +148,7 @@ namespace Info
                        using (var reader = new StreamReader(content!))
                        {
                            var strContent = reader.ReadToEnd();
-                           dictionary = JsonConvert.DeserializeObject<Dictionary<string, Information>>(strContent);
+                           dictionary = JsonConvert.DeserializeObject<Dictionary<string, FirebaseInformation>>(strContent);
                            list.AddRange(dictionary?.Keys);
                            PanelFirebase.Show(); ListOfKeys.Clear();
                            foreach (var value in list)
@@ -182,13 +182,13 @@ namespace Info
                             {
                                 TimerUpdateInfo.Enabled = !TimerUpdateInfo.Enabled;
                                 _checkedFirebase = !_checkedFirebase;
-                                LabelOS.Text = $"Операционная система: {_systemInformation.OperationSystem}";
+                                LabelOS.Text = $"Операционная система: {_systemFirebaseInformation.OperationSystem}";
                                 LabelRAM.Text = $"Оперативная память: {Hardware.UsageRAM}";
-                                LabelMonitor.Text = $"Монитор: {_systemInformation.Monitor}";
+                                LabelMonitor.Text = $"Монитор: {_systemFirebaseInformation.Monitor}";
                                 LinkSMART.Text = Hardware.Drives;
-                                LabelCPU.Text = $"Процессор: ({string.Format("{0:0.0}%", _performanceCounterCpu?.NextValue())}) {_systemInformation.CPU}";
-                                LabelMotherboard.Text = $"Материнская плата: {_systemInformation.Motherboard}";
-                                LabelGPU.Text = $"Видеокарта: {_systemInformation.GPU}";
+                                LabelCPU.Text = $"Процессор: ({string.Format("{0:0.0}%", _performanceCounterCpu?.NextValue())}) {_systemFirebaseInformation.CPU}";
+                                LabelMotherboard.Text = $"Материнская плата: {_systemFirebaseInformation.Motherboard}";
+                                LabelGPU.Text = $"Видеокарта: {_systemFirebaseInformation.GPU}";
                                 LinkLabelOfProcesses.Text = $"Процессы ({Process.GetProcesses().Length})";
                                 LinkSMART.Click += LinkSmartClick;
                                 LabelDispatcher.Show(); LinkLabelOfProcesses.Show();
@@ -198,7 +198,6 @@ namespace Info
 
                 if (a.KeyValue == (char)Keys.Escape) ButtonClose.PerformClick();
             };
-            PanelHead.Click += (_, _) => SendKeys.Send(Keys.D7.ToString());
         }
 
         // Плавное открытие формы
@@ -230,54 +229,48 @@ namespace Info
             {
                 BeginInvoke((MethodInvoker)(() =>
                 {
+                    // сведения о пк
                     var howMuch = TextRenderer.MeasureText("Операционная система:", LabelOS.Font).Width;
-                    LabelOS.Text = $"Операционная система: {_systemInformation.OperationSystem}";
+                    LabelOS.Text = $"Операционная система: {_systemFirebaseInformation.OperationSystem}";
 
                     LabelOS.Left = (ClientSize.Width - LabelOS.Width) / 2;
                     var list = new List<Control> { LabelRAM, LabelMonitor,LabelCPU, LabelMotherboard, LabelGPU};
                     list.ForEach(x => x.Location = new Point(LabelOS.Location.X + howMuch - x.Width, x.Location.Y));
                     
                     LabelRAM.Text = $"Оперативная память: {Hardware.UsageRAM}";
-                    LabelMonitor.Text = $"Монитор: {_systemInformation.Monitor}";
+                    LabelMonitor.Text = $"Монитор: {_systemFirebaseInformation.Monitor}";
                     LinkSMART.Text = Hardware.Drives;
 
-                    LabelCPU.Text = $"Процессор: ({string.Format("{0:0.0}%", _performanceCounterCpu?.NextValue())}) {_systemInformation.CPU}";
+                    LabelCPU.Text = $"Процессор: ({string.Format("{0:0.0}%", _performanceCounterCpu?.NextValue())}) {_systemFirebaseInformation.CPU}";
 
-                    LabelMotherboard.Text = $"Материнская плата: {_systemInformation.Motherboard}";
-                    LabelGPU.Text = $"Видеокарта: {_systemInformation.GPU}";
+                    LabelMotherboard.Text = $"Материнская плата: {_systemFirebaseInformation.Motherboard}";
+                    LabelGPU.Text = $"Видеокарта: {_systemFirebaseInformation.GPU}";
                     LinkLabelOfProcesses.Text = $"Процессы ({Process.GetProcesses().Length})";
 
                     LinkLabelOfProcesses.Location = new Point(LinkLabelOfProcesses.Location.X, LinkSMART.Size.Height + LinkSMART.Location.Y + 30 - LinkLabelOfProcesses.Size.Height);
                     LabelDispatcher.Location = new Point(LabelDispatcher.Location.X, LinkSMART.Size.Height + LinkSMART.Location.Y + 30 - LabelDispatcher.Size.Height);
+
+
+                    // SMART panel
+                    var items = Smart.GetInfo().Item1.ToArray();
+                    var count = Smart.GetInfo().Item2;
+                    ListViewSMART.Items.Clear();
+                    ListViewSMART.Items.AddRange(items);
+
+                    ListViewSMART.AutoResizeColumn(0, ColumnHeaderAutoResizeStyle.ColumnContent);
+                    ListViewSMART.AutoResizeColumn(1, ColumnHeaderAutoResizeStyle.HeaderSize);
+                    ListViewSMART.AutoResizeColumn(2, ColumnHeaderAutoResizeStyle.HeaderSize);
+                    ListViewSMART.AutoResizeColumn(3, ColumnHeaderAutoResizeStyle.HeaderSize);
+                    ListViewSMART.AutoResizeColumn(4, ColumnHeaderAutoResizeStyle.ColumnContent);
+                    ListViewSMART.AutoResizeColumn(5, ColumnHeaderAutoResizeStyle.HeaderSize);
+
+                    LabelSMART.Text = $"Сканировано устройств: {count}";
+                    LabelSMART.Left = (ClientSize.Width - LabelSMART.Width) / 2;
                 }));
             })
             { IsBackground = true, Priority = ThreadPriority.AboveNormal }.Start();
-
             _performanceCounterCpu = new PerformanceCounter("Сведения о процессоре", "% загруженности процессора", "_Total");
 
-            // Смарт панель
-            new Thread(() =>
-                {
-                    BeginInvoke((MethodInvoker)(() =>
-                    {
-
-                        var list = Smart.GetInfo().Item1.ToArray();
-                        var count = Smart.GetInfo().Item2;
-                        ListViewSMART.Items.Clear();
-                        ListViewSMART.Items.AddRange(list);
-
-                        ListViewSMART.AutoResizeColumn(0, ColumnHeaderAutoResizeStyle.ColumnContent);
-                        ListViewSMART.AutoResizeColumn(1, ColumnHeaderAutoResizeStyle.HeaderSize);
-                        ListViewSMART.AutoResizeColumn(2, ColumnHeaderAutoResizeStyle.HeaderSize);
-                        ListViewSMART.AutoResizeColumn(3, ColumnHeaderAutoResizeStyle.HeaderSize);
-                        ListViewSMART.AutoResizeColumn(4, ColumnHeaderAutoResizeStyle.ColumnContent);
-                        ListViewSMART.AutoResizeColumn(5, ColumnHeaderAutoResizeStyle.HeaderSize);
-
-                        LabelSMART.Text = $"Сканировано устройств: {count}";
-                        LabelSMART.Left = (ClientSize.Width - LabelSMART.Width) / 2;
-                    }));
-                })
-            { IsBackground = true, Priority = ThreadPriority.AboveNormal }.Start();
         }
 
         // Обновление данных каждую секунду
@@ -285,7 +278,7 @@ namespace Info
         {
             BeginInvoke((MethodInvoker)(() =>
             {
-                LabelCPU.Text = $"Процессор: ({string.Format("{0:0.0}%", _performanceCounterCpu?.NextValue())}) {_systemInformation.CPU}";
+                LabelCPU.Text = $"Процессор: ({string.Format("{0:0.0}%", _performanceCounterCpu?.NextValue())}) {_systemFirebaseInformation.CPU}";
                 LinkSMART.Text = Hardware.Drives;
                 LabelRAM.Text = $"Оперативная память: {Hardware.UsageRAM}";
                 LinkLabelOfProcesses.Text = $"Процессы ({Process.GetProcesses().Length})";

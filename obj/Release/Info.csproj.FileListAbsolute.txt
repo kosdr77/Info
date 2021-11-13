@@ -111,3 +111,4 @@ C:\Users\Admin\Desktop\Info\bin\Release\Newtonsoft.Json.xml
 C:\Users\Admin\Desktop\Info\bin\Release\System.Net.Http.Extensions.xml
 C:\Users\Admin\Desktop\Info\bin\Release\System.Net.Http.Primitives.xml
 C:\Users\Admin\Desktop\Info\obj\Release\Info.NotificationForm.resources
+C:\Users\Admin\Desktop\Info\obj\Release\Info.csproj.CopyComplete
