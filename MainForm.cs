@@ -157,21 +157,21 @@ namespace Info
 
                        ListOfKeys.Click += (s, a) =>
                        {
-                           BeginInvoke((MethodInvoker)((() =>
+                           BeginInvoke((MethodInvoker) (() =>
                            {
-                                   var selectedItem = ListOfKeys.SelectedItems[0].Text;
-                                   LabelOS.Text = $"Операционная система: {dictionary?[selectedItem]?.OperationSystem}";
-                                   LabelCPU.Text = $"Процессор: {dictionary?[selectedItem]?.CPU}";
-                                   LabelGPU.Text = $"Видеокарта: {dictionary?[selectedItem].GPU}";
-                                   LabelMotherboard.Text = $"Материнская плата: {dictionary?[selectedItem]?.Motherboard}";
-                                   LabelMonitor.Text = $"Монитор: {dictionary?[selectedItem]?.Monitor}";
-                                   LabelRAM.Text = $"Оперативная память: {dictionary?[selectedItem]?.RAM}";
-                                   LinkSMART.Text = $"{dictionary?[selectedItem]?.Drives}";
-                                   LinkSMART.Click -= LinkSmartClick;
-                                   LabelDispatcher.Hide();
-                                   LinkLabelOfProcesses.Hide();
-                           })));
-                       };
+                               var selectedItem = ListOfKeys.SelectedItems[0].Text;
+                               LabelOS.Text = dictionary?[selectedItem]?.OperationSystem == "" ? "Операционная система: нет данных" : $"Операционная система: {dictionary?[selectedItem]?.OperationSystem}";
+                               LabelCPU.Text = dictionary?[selectedItem]?.CPU == "" ? "Процессор: нет данных" : $"Процессор: {dictionary?[selectedItem]?.CPU}";
+                               LabelGPU.Text = dictionary?[selectedItem]?.GPU == "" ? "Видеокарта: нет данных" : $"Видеокарта: {dictionary?[selectedItem].GPU}";
+                               LabelMotherboard.Text = dictionary?[selectedItem]?.Motherboard == "" ? "Материнская плата: нет данных" : $"Материнская плата: {dictionary?[selectedItem]?.Motherboard}";
+                               LabelMonitor.Text = dictionary?[selectedItem]?.Monitor == "" ? "Монитор: нет данных" : $"Монитор: {dictionary?[selectedItem]?.Monitor}";
+                               LabelRAM.Text = dictionary?[selectedItem]?.RAM == "" ? "Оперативная память: нет данных": $"Оперативная память: {dictionary?[selectedItem]?.RAM}";
+                               LinkSMART.Text = dictionary?[selectedItem]?.Drives == "" ? "нет данных" : $"{dictionary?[selectedItem]?.Drives}";
+
+                               LinkSMART.Click -= LinkSmartClick;
+                               LabelDispatcher.Hide();
+                               LinkLabelOfProcesses.Hide();
+                           })); };
                     }
                     catch (Exception) {
                         // ignored
@@ -208,7 +208,7 @@ namespace Info
                 BeginInvoke((MethodInvoker)(async () =>
                 {
                     SendKeys.Send(Keys.D5.ToString());
-                    new Thread(StartInfo).Start();
+                    new Thread(StartInfo) { IsBackground = true}.Start();
                     for (Opacity = 0; Opacity < 1; Opacity += .2) await Task.Delay(20);
                     TimerUpdateInfo.Start();
                 }));
@@ -269,8 +269,14 @@ namespace Info
                 }));
             })
             { IsBackground = true, Priority = ThreadPriority.AboveNormal }.Start();
-            _performanceCounterCpu = new PerformanceCounter("Сведения о процессоре", "% загруженности процессора", "_Total");
 
+            // PERFORMANCECOUNTER (ЗАГРУЗКА ЦП)
+            try { _performanceCounterCpu = new PerformanceCounter("Сведения о процессоре", "% загруженности процессора", "_Total"); }
+            catch
+            {
+                try { _performanceCounterCpu = new PerformanceCounter("Processor", "% Processor Time", "_Total"); }
+                catch { MessageBox.Show($"Твой язык ОС не поддерживается. ¯|_(ツ)_|¯ (не увидишь загрузку ЦП)"); }
+            }
         }
 
         // Обновление данных каждую секунду
@@ -290,8 +296,8 @@ namespace Info
         // Событие клика на линклейбл накопителей
         private void LinkSmartClick(object sender, EventArgs e)
         {
-            PanelSMART.Click += (s, a) => PanelInfo.Demonstrate(this);
-            PanelSMART.Demonstrate(this);
+            PanelSMART.Click += (s, a) => PanelInfo.BringToFront();
+            PanelSMART.BringToFront();
         }
 
         // Плавное закрытие программы
@@ -301,6 +307,7 @@ namespace Info
             notifyIcon1.Dispose();
             for (Opacity = 1; Opacity > .0; Opacity -= .2) await Task.Delay(7);
             Dispose();
+            InstanceChecker.ReleaseMemory();
         }
 
         // Плавное скрытие программы
@@ -331,19 +338,15 @@ namespace Info
                             var list = new List<ListViewItem>();
                             {
                                 foreach (var process in Process.GetProcesses())
-                                    try
-                                    {
+                                    try { 
                                         list.Add(new ListViewItem(new[] {
                                         $"{process.ProcessName} ({process.Id})",
-                                        $"{process.WorkingSet64 / (1024 * 1024)} MB"}));
-                                    }
-                                    catch
-                                    {
-                                        // ignored
-                                    }
+                                        $"{process.WorkingSet64 / (1024 * 1024)} MB" }));
+                                    } catch { }
                             }
 
-                            int topItemIndex = 0;
+                            // for update
+                            var topItemIndex = 0;
                             try { topItemIndex = ListViewProcesses.TopItem.Index; }
                             catch (Exception) { }
                             ListViewProcesses.BeginUpdate();
@@ -366,10 +369,10 @@ namespace Info
             TimerUpdateProcesses.Tick += (_, _) => new Thread(RefreshList) { IsBackground = true, Priority = ThreadPriority.Highest }.Start();
             new Thread(RefreshList) { IsBackground = true, Priority = ThreadPriority.Highest }.Start();
 
-            PanelProcess.Demonstrate(this);
+            PanelProcess.BringToFront();
             TimerUpdateProcesses.Start();
 
-            PanelProcess.Click += (s, a) => PanelInfo.Demonstrate(this);
+            PanelProcess.Click += (s, a) => PanelInfo.BringToFront();
         }
 
         // Сортировка listview

@@ -39,8 +39,8 @@ namespace Info
                     string text = "";
                     foreach (var drive in allDrives)
                     {
-                        drive.VolumeLabel = drive.VolumeLabel == "" ? "¯\\_(ツ)_//¯" : drive.VolumeLabel;
-                        text += $"{drive.Name.Remove(drive.Name.Length - 1)} ({drive.VolumeLabel}, {drive.DriveFormat}) " +
+                        var textVolumeLabel= drive.VolumeLabel == "" ? "¯\\_(ツ)_//¯" : drive.VolumeLabel;
+                        text += $"{drive.Name.Remove(drive.Name.Length - 1)} ({textVolumeLabel}, {drive.DriveFormat}) " +
                                 $"[{Sizer(drive.AvailableFreeSpace)}/{Sizer(drive.TotalSize)}]\n";
                     }
                     return text;

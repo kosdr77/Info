@@ -81,6 +81,7 @@
             this.PanelHead.Controls.Add(this.ButtonHide);
             this.PanelHead.Controls.Add(this.ButtonClose);
             this.PanelHead.Controls.Add(this.LabelHead);
+            this.PanelHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelHead.Location = new System.Drawing.Point(0, 0);
             this.PanelHead.Name = "PanelHead";
             this.PanelHead.Size = new System.Drawing.Size(735, 30);
@@ -158,9 +159,10 @@
             this.PanelInfo.Controls.Add(this.LabelGPU);
             this.PanelInfo.Controls.Add(this.LabelMotherboard);
             this.PanelInfo.Controls.Add(this.LabelCPU);
+            this.PanelInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelInfo.Location = new System.Drawing.Point(0, 0);
             this.PanelInfo.Name = "PanelInfo";
-            this.PanelInfo.Size = new System.Drawing.Size(734, 489);
+            this.PanelInfo.Size = new System.Drawing.Size(731, 489);
             this.PanelInfo.TabIndex = 33;
             // 
             // PanelFirebase
@@ -374,7 +376,6 @@
             this.PanelProcess.Name = "PanelProcess";
             this.PanelProcess.Size = new System.Drawing.Size(735, 489);
             this.PanelProcess.TabIndex = 50;
-            this.PanelProcess.Visible = false;
             // 
             // LabelProcess
             // 
@@ -411,7 +412,7 @@
             // ColumnProcess
             // 
             this.ColumnProcess.Text = "Процесс";
-            this.ColumnProcess.Width = 350;
+            this.ColumnProcess.Width = 300;
             // 
             // ColumnRAM
             // 
@@ -429,7 +430,6 @@
             this.PanelSMART.Name = "PanelSMART";
             this.PanelSMART.Size = new System.Drawing.Size(735, 489);
             this.PanelSMART.TabIndex = 51;
-            this.PanelSMART.Visible = false;
             // 
             // LabelSMART
             // 
