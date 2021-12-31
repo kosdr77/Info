@@ -1,9 +1,4 @@
-﻿using FireSharp;
-using FireSharp.Config;
-using FireSharp.Interfaces;
-using Microsoft.Win32;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
@@ -14,6 +9,13 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FireSharp;
+using FireSharp.Config;
+using FireSharp.Interfaces;
+using Info.Classes;
+using Info.Windows;
+using Microsoft.Win32;
+using Newtonsoft.Json;
 
 /* 
     Автор: Костромин Даниил, 131-ПИо.
@@ -36,7 +38,7 @@ namespace Info
 #endif
             InitializeComponent();
 
-            if (!InstanceChecker.TakeMemory()) { LabelHead.Text += "(копия)"; LabelHead.ForeColor = Color.BurlyWood;}
+            if (!InstanceChecker.TakeMemory()) { LabelHead.Text += "(копия)"; LabelHead.ForeColor = Color.BurlyWood; }
 
             // Позволяем таскать за заголовок Label и Panel
             new List<Control> { LabelHead, PanelHead }.ForEach(x =>
@@ -72,9 +74,10 @@ namespace Info
             notifyIcon1.ContextMenu = contexMenu1;
             notifyIcon1.Icon = Properties.Resources.loader_77;
             notifyIcon1.Click += async (s, a) => { if (!Visible) { Show(); for (Opacity = 0; Opacity < 1; Opacity += .2) await Task.Delay(7); notifyIcon1.Text = $"{Text}"; } };
-            
+
             // FIREBASE
-            KeyDown += async (_, a) => {
+            KeyDown += async (_, a) =>
+            {
 
                 // Конфиг
                 IFirebaseConfig fireCon = new FirebaseConfig
@@ -82,7 +85,7 @@ namespace Info
                     AuthSecret = "uISamWgrSMKr4z8Qc7xg4q3lE9dV3o4vyyWv7cs5",
                     BasePath = "https://info-d8750-default-rtdb.europe-west1.firebasedatabase.app/"
                 };
-                
+
                 var info = new FirebaseInformation();
 
                 // Занесение в базу
@@ -103,7 +106,8 @@ namespace Info
                         }
                         else await client.UpdateAsync($"Computer Components/{Environment.UserName}{key.GetValue("ID")}", info);
                     }
-                    catch (Exception) {
+                    catch (Exception)
+                    {
                         // ignored
                     }
                 }
@@ -122,78 +126,83 @@ namespace Info
                             if (!Application.OpenForms.OfType<NotificationForm>().Any()) new NotificationForm(2).Show();
                         }
                     }
-                    catch (Exception) {
+                    catch (Exception)
+                    {
                         // ignored
                     }
                 }
 
                 // Чтение всех данных с базы
-                if (a.KeyValue == (char)Keys.D7 && !_checkedFirebase) {
+                if (a.KeyValue == (char)Keys.D7 && !_checkedFirebase)
+                {
 
                     // Переключение флага для раскрытия/скрытия панели с данными
                     _checkedFirebase = !_checkedFirebase;
 
                     // Остановка таймера
-                    TimerUpdateInfo.Enabled = !TimerUpdateInfo.Enabled; 
+                    TimerUpdateInfo.Enabled = !TimerUpdateInfo.Enabled;
 
                     // Чтение json базы.
                     try
                     {
-                       Dictionary<string, FirebaseInformation> dictionary;
-                       var list = new List<string>() { };
+                        Dictionary<string, FirebaseInformation> dictionary;
+                        var list = new List<string>() { };
 
-                       var webRequest = WebRequest.Create(new Uri($"{fireCon.BasePath}Computer%20Components.json"));
-                       using (var response = webRequest.GetResponse())
-                       using (var content = response.GetResponseStream())
-                       using (var reader = new StreamReader(content!))
-                       {
-                           var strContent = reader.ReadToEnd();
-                           dictionary = JsonConvert.DeserializeObject<Dictionary<string, FirebaseInformation>>(strContent);
-                           list.AddRange(dictionary?.Keys);
-                           PanelFirebase.Show(); ListOfKeys.Clear();
-                           foreach (var value in list)
-                               ListOfKeys.Items.Add(new ListViewItem(value));
-                       }
+                        var webRequest = WebRequest.Create(new Uri($"{fireCon.BasePath}Computer%20Components.json"));
+                        using (var response = webRequest.GetResponse())
+                        using (var content = response.GetResponseStream())
+                        using (var reader = new StreamReader(content!))
+                        {
+                            var strContent = reader.ReadToEnd();
+                            dictionary = JsonConvert.DeserializeObject<Dictionary<string, FirebaseInformation>>(strContent);
+                            list.AddRange(dictionary?.Keys);
+                            PanelFirebase.Show(); ListOfKeys.Clear();
+                            foreach (var value in list)
+                                ListOfKeys.Items.Add(new ListViewItem(value));
+                        }
 
-                       ListOfKeys.Click += (s, a) =>
-                       {
-                           BeginInvoke((MethodInvoker) (() =>
-                           {
-                               var selectedItem = ListOfKeys.SelectedItems[0].Text;
-                               LabelOS.Text = dictionary?[selectedItem]?.OperationSystem == "" ? "Операционная система: нет данных" : $"Операционная система: {dictionary?[selectedItem]?.OperationSystem}";
-                               LabelCPU.Text = dictionary?[selectedItem]?.CPU == "" ? "Процессор: нет данных" : $"Процессор: {dictionary?[selectedItem]?.CPU}";
-                               LabelGPU.Text = dictionary?[selectedItem]?.GPU == "" ? "Видеокарта: нет данных" : $"Видеокарта: {dictionary?[selectedItem].GPU}";
-                               LabelMotherboard.Text = dictionary?[selectedItem]?.Motherboard == "" ? "Материнская плата: нет данных" : $"Материнская плата: {dictionary?[selectedItem]?.Motherboard}";
-                               LabelMonitor.Text = dictionary?[selectedItem]?.Monitor == "" ? "Монитор: нет данных" : $"Монитор: {dictionary?[selectedItem]?.Monitor}";
-                               LabelRAM.Text = dictionary?[selectedItem]?.RAM == "" ? "Оперативная память: нет данных": $"Оперативная память: {dictionary?[selectedItem]?.RAM}";
-                               LinkSMART.Text = dictionary?[selectedItem]?.Drives == "" ? "нет данных" : $"{dictionary?[selectedItem]?.Drives}";
+                        ListOfKeys.Click += (s, a) =>
+                        {
+                            BeginInvoke((MethodInvoker)(() =>
+                          {
+                              var selectedItem = ListOfKeys.SelectedItems[0].Text;
+                              LabelOS.Text = dictionary?[selectedItem]?.OperationSystem == "" ? "Операционная система: нет данных" : $"Операционная система: {dictionary?[selectedItem]?.OperationSystem}";
+                              LabelCPU.Text = dictionary?[selectedItem]?.CPU == "" ? "Процессор: нет данных" : $"Процессор: {dictionary?[selectedItem]?.CPU}";
+                              LabelGPU.Text = dictionary?[selectedItem]?.GPU == "" ? "Видеокарта: нет данных" : $"Видеокарта: {dictionary?[selectedItem].GPU}";
+                              LabelMotherboard.Text = dictionary?[selectedItem]?.Motherboard == "" ? "Материнская плата: нет данных" : $"Материнская плата: {dictionary?[selectedItem]?.Motherboard}";
+                              LabelMonitor.Text = dictionary?[selectedItem]?.Monitor == "" ? "Монитор: нет данных" : $"Монитор: {dictionary?[selectedItem]?.Monitor}";
+                              LabelRAM.Text = dictionary?[selectedItem]?.RAM == "" ? "Оперативная память: нет данных" : $"Оперативная память: {dictionary?[selectedItem]?.RAM}";
+                              LinkSMART.Text = dictionary?[selectedItem]?.Drives == "" ? "нет данных" : $"{dictionary?[selectedItem]?.Drives}";
 
-                               LinkSMART.Click -= LinkSmartClick;
-                               LabelDispatcher.Hide();
-                               LinkLabelOfProcesses.Hide();
-                           })); };
+                              LinkSMART.Click -= LinkSmartClick;
+                              LabelDispatcher.Hide();
+                              LinkLabelOfProcesses.Hide();
+                          }));
+                        };
                     }
-                    catch (Exception) {
+                    catch (Exception)
+                    {
                         // ignored
                     }
-                } 
-                else {
-                            Invoke((MethodInvoker)(() =>
-                            {
-                                TimerUpdateInfo.Enabled = !TimerUpdateInfo.Enabled;
-                                _checkedFirebase = !_checkedFirebase;
-                                LabelOS.Text = $"Операционная система: {_systemFirebaseInformation.OperationSystem}";
-                                LabelRAM.Text = $"Оперативная память: {Hardware.UsageRAM}";
-                                LabelMonitor.Text = $"Монитор: {_systemFirebaseInformation.Monitor}";
-                                LinkSMART.Text = Hardware.Drives;
-                                LabelCPU.Text = $"Процессор: ({string.Format("{0:0.0}%", _performanceCounterCpu?.NextValue())}) {_systemFirebaseInformation.CPU}";
-                                LabelMotherboard.Text = $"Материнская плата: {_systemFirebaseInformation.Motherboard}";
-                                LabelGPU.Text = $"Видеокарта: {_systemFirebaseInformation.GPU}";
-                                LinkLabelOfProcesses.Text = $"Процессы ({Process.GetProcesses().Length})";
-                                LinkSMART.Click += LinkSmartClick;
-                                LabelDispatcher.Show(); LinkLabelOfProcesses.Show();
-                                PanelFirebase.Hide();
-                            }));
+                }
+                else
+                {
+                    Invoke((MethodInvoker)(() =>
+                    {
+                        TimerUpdateInfo.Enabled = !TimerUpdateInfo.Enabled;
+                        _checkedFirebase = !_checkedFirebase;
+                        LabelOS.Text = $"Операционная система: {_systemFirebaseInformation.OperationSystem}";
+                        LabelRAM.Text = $"Оперативная память: {Hardware.UsageRAM}";
+                        LabelMonitor.Text = $"Монитор: {_systemFirebaseInformation.Monitor}";
+                        LinkSMART.Text = Hardware.Drives;
+                        LabelCPU.Text = $"Процессор: ({string.Format("{0:0.0}%", _performanceCounterCpu?.NextValue())}) {_systemFirebaseInformation.CPU}";
+                        LabelMotherboard.Text = $"Материнская плата: {_systemFirebaseInformation.Motherboard}";
+                        LabelGPU.Text = $"Видеокарта: {_systemFirebaseInformation.GPU}";
+                        LinkLabelOfProcesses.Text = $"Процессы ({Process.GetProcesses().Length})";
+                        LinkSMART.Click += LinkSmartClick;
+                        LabelDispatcher.Show(); LinkLabelOfProcesses.Show();
+                        PanelFirebase.Hide();
+                    }));
                 }
 
                 if (a.KeyValue == (char)Keys.Escape) ButtonClose.PerformClick();
@@ -208,13 +217,13 @@ namespace Info
                 BeginInvoke((MethodInvoker)(async () =>
                 {
                     SendKeys.Send(Keys.D5.ToString());
-                    new Thread(StartInfo) { IsBackground = true}.Start();
+                    new Thread(StartInfo) { IsBackground = true }.Start();
                     for (Opacity = 0; Opacity < 1; Opacity += .2) await Task.Delay(20);
                     TimerUpdateInfo.Start();
                 }));
             }).Start();
         }
-        
+
         // Закрытие
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -234,9 +243,9 @@ namespace Info
                     LabelOS.Text = $"Операционная система: {_systemFirebaseInformation.OperationSystem}";
 
                     LabelOS.Left = (ClientSize.Width - LabelOS.Width) / 2;
-                    var list = new List<Control> { LabelRAM, LabelMonitor,LabelCPU, LabelMotherboard, LabelGPU};
+                    var list = new List<Control> { LabelRAM, LabelMonitor, LabelCPU, LabelMotherboard, LabelGPU };
                     list.ForEach(x => x.Location = new Point(LabelOS.Location.X + howMuch - x.Width, x.Location.Y));
-                    
+
                     LabelRAM.Text = $"Оперативная память: {Hardware.UsageRAM}";
                     LabelMonitor.Text = $"Монитор: {_systemFirebaseInformation.Monitor}";
                     LinkSMART.Text = Hardware.Drives;
@@ -338,11 +347,13 @@ namespace Info
                             var list = new List<ListViewItem>();
                             {
                                 foreach (var process in Process.GetProcesses())
-                                    try { 
+                                    try
+                                    {
                                         list.Add(new ListViewItem(new[] {
                                         $"{process.ProcessName} ({process.Id})",
                                         $"{process.WorkingSet64 / (1024 * 1024)} MB" }));
-                                    } catch { }
+                                    }
+                                    catch { }
                             }
 
                             // for update

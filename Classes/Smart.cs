@@ -1,12 +1,9 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Management;
-using System.Runtime.Remoting.Messaging;
-using System.Threading;
 using System.Windows.Forms;
 
-namespace Info
+namespace Info.Classes
 {
     public class Hdd
     {

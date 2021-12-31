@@ -1,4 +1,4 @@
-﻿namespace Info
+﻿namespace Info.Classes
 {
     internal class FirebaseInformation
     {

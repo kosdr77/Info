@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 
-namespace Info
+namespace Info.Classes
 {
     class InstanceChecker
     {

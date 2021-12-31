@@ -3,8 +3,7 @@ using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Windows.Forms;
 
-
-namespace Info
+namespace Info.Classes
 {
     public static class Extensions
     {
@@ -12,9 +11,9 @@ namespace Info
         // Скрыть все панели и показать одну определённую
         public static void Demonstrate(this Panel panel, MainForm owner)
         {
-                foreach (var panelmain in owner.Controls.OfType<Panel>().Where(x => x.Name == "PanelMain"))
-                    panelmain.Controls.OfType<Panel>().Where(x => x.Visible).ToList().ForEach(x => x.Hide());
-                panel.Show();
+            foreach (var panelmain in owner.Controls.OfType<Panel>().Where(x => x.Name == "PanelMain"))
+                panelmain.Controls.OfType<Panel>().Where(x => x.Visible).ToList().ForEach(x => x.Hide());
+            panel.Show();
         }
 
         // Краска для форм

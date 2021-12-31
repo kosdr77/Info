@@ -1,4 +1,6 @@
-﻿namespace Info
+﻿using Info.Windows;
+
+namespace Info
 {
     partial class MainForm : FormShadow
     {

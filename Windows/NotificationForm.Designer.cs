@@ -1,4 +1,6 @@
-﻿namespace Info
+﻿using Info.Windows;
+
+namespace Info
 {
     sealed partial class NotificationForm : FormShadow
     {

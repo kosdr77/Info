@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Windows.Forms;
 
-namespace Info
-{  
+namespace Info.Classes
+{
     /// <summary>
     /// This class is an implementation of the 'IComparer' interface.
     /// </summary>

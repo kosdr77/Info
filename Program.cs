@@ -18,7 +18,7 @@ namespace Info
             System.Runtime.ProfileOptimization.SetProfileRoot(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.ThreadException += delegate(object o, ThreadExceptionEventArgs args) { Exception(args); };
+            Application.ThreadException += delegate (object o, ThreadExceptionEventArgs args) { Exception(args); };
             if (!Application.OpenForms.OfType<MainForm>().Any()) Application.Run(new MainForm());
         }
 

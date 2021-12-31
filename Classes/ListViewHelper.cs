@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace Info
+namespace Info.Classes
 {
     public enum ListViewExtendedStyles
     {

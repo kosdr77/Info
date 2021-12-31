@@ -5,7 +5,7 @@ using System.Management;
 using System.Text;
 using System.Windows;
 
-namespace Info
+namespace Info.Classes
 {
     /// <summary>
     /// Данные о текущем компе
@@ -32,14 +32,15 @@ namespace Info
                 }
                 catch (Exception) { return ""; }
             })();
-            Drives = new Func<string>(() => {
+            Drives = new Func<string>(() =>
+            {
                 try
                 {
                     var allDrives = DriveInfo.GetDrives();
                     string text = "";
                     foreach (var drive in allDrives)
                     {
-                        var textVolumeLabel= drive.VolumeLabel == "" ? "¯\\_(ツ)_//¯" : drive.VolumeLabel;
+                        var textVolumeLabel = drive.VolumeLabel == "" ? "¯\\_(ツ)_//¯" : drive.VolumeLabel;
                         text += $"{drive.Name.Remove(drive.Name.Length - 1)} ({textVolumeLabel}, {drive.DriveFormat}) " +
                                 $"[{Sizer(drive.AvailableFreeSpace)}/{Sizer(drive.TotalSize)}]\n";
                     }
@@ -47,14 +48,16 @@ namespace Info
                 }
                 catch (Exception) { return ""; }
             })();
-            RAM = new Func<string>(() => {
+            RAM = new Func<string>(() =>
+            {
                 try
                 {
                     return $"{Sizer(Convert.ToDouble(GetComponent("Win32_ComputerSystem", "TotalPhysicalMemory")))}";
                 }
                 catch (Exception) { return ""; }
             })();
-            CPU = new Func<string>(() => {
+            CPU = new Func<string>(() =>
+            {
                 try
                 {
                     var name = new StringBuilder(GetComponent("Win32_Processor", "Name"));
@@ -62,7 +65,8 @@ namespace Info
                 }
                 catch (Exception) { return ""; }
             })();
-            Motherboard = new Func<string>(() => {
+            Motherboard = new Func<string>(() =>
+            {
                 try
                 {
                     var manufacturer = GetComponent("Win32_BaseBoard", "Manufacturer");
@@ -71,7 +75,8 @@ namespace Info
                 }
                 catch (Exception) { return ""; }
             })();
-            GPU = new Func<string>(() => {
+            GPU = new Func<string>(() =>
+            {
                 try
                 {
                     var name = GetComponent("Win32_VideoController", "Name");
@@ -80,7 +85,8 @@ namespace Info
                 }
                 catch (Exception) { return ""; }
             })();
-            Monitor = new Func<string>(() => {
+            Monitor = new Func<string>(() =>
+            {
                 try
                 {
                     var name = GetComponent("Win32_DesktopMonitor", "Name");
@@ -139,6 +145,6 @@ namespace Info
             int place = (int)Math.Floor(Math.Log(bytes, 1024));
             double num = Math.Round(bytes / Math.Pow(1024, place), 1);
             return $"{Math.Sign(countBytes) * num} {type[place]}";
-        }        
+        }
     }
 }
