@@ -4,7 +4,6 @@ using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Info.Classes;
-using Info.Windows;
 
 /* 
     Автор: Костромин Даниил, 131-ПИо.

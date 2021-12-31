@@ -1,6 +1,8 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
-namespace Info.Windows
+namespace Info
 {
     // Наследуемся от Form
     public class FormShadow : Form

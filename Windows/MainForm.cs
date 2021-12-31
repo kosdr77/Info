@@ -13,7 +13,6 @@ using FireSharp;
 using FireSharp.Config;
 using FireSharp.Interfaces;
 using Info.Classes;
-using Info.Windows;
 using Microsoft.Win32;
 using Newtonsoft.Json;
 
@@ -22,7 +21,7 @@ using Newtonsoft.Json;
     Информационные системы
  */
 
-namespace Info
+namespace Info.App
 {
     public partial class MainForm : FormShadow
     {

@@ -5,9 +5,9 @@ using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace Info
+namespace Info.App
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// Главная точка входа для приложения.
