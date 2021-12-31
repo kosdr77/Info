@@ -5,9 +5,9 @@ using System.Runtime.InteropServices;
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанных со сборкой.
 [assembly: AssemblyTitle("Info")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Information about your PC")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("kosdr77")]
 [assembly: AssemblyProduct("Info")]
 [assembly: AssemblyCopyright("kosdr77 © Copyright")]
 [assembly: AssemblyTrademark("")]
